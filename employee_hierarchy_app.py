@@ -241,7 +241,7 @@ if search_term:
                     **{col: (row[col] if row[col] else "—") for col in CHAIN_COLUMNS},
                 }]
             )
-            st.dataframe(manager_row, width=True, hide_index=True)
+            st.dataframe(manager_row, use_container_width=True, hide_index=True)
 
             if i < len(matches) - 1:
                 st.divider()

@@ -233,7 +233,7 @@ if search_term:
     else:
         st.write(f"Found **{len(matches)}** matching record(s).")
         for i, (_, row) in enumerate(matches.iterrows()):
-            st.markdown(f"**{row['Name']}**  ·  {row['Email']}  ·  `{row['Employee ID']}`  ·  Role: {row['Role']}")
+            st.markdown(f"**{row['Name']}**  ·  {row['Email']}  ·  `{row['Employee ID']}`  ·  Role: st.info({row['Role'].upper()})")
 
             manager_row = pd.DataFrame(
                 [{
